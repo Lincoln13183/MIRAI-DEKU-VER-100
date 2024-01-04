@@ -26,5 +26,5 @@ module.exports.run = async ({ event, api, args, Users }) => {
   let attach = new Discord.MessageAttachment(img);
   var path_trash = __dirname + "/cache/spank.png";
   fs.writeFileSync(path_trash, attach.attachment);
-  api.sendMessage({attachment: fs.createReadStream(path_trash)}, event.threadID, () => fs.unlinkSync(path_trash), event.messageID);
+  api.sendMessage({body: "𝗬𝗼𝘂 𝗱𝗲𝘀𝗲𝗿𝘃𝗲 𝘁𝗵𝗶𝘀 𝘆𝗼𝘂 𝘀𝗵*𝘁!", attachment: fs.createReadStream(path_trash)}, event.threadID, () => fs.unlinkSync(path_trash), event.messageID);
 }

@@ -18,15 +18,15 @@ module.exports.run = async function ({ api, event, args }) {
   const input = args.join(' ').split('=');
 
   if (input.length !== 2) {
-    api.sendMessage('put you text [your text] = [author]\n\nExample:\n Minsan Masakit haha = Jonell', threadID, messageID);
+    api.sendMessage('ℹ️ | 𝖬𝖺𝗌𝗍𝖾𝗋, 𝗍𝗁𝖺𝗍𝗌 𝖺 𝗐𝗋𝗈𝗇𝗀 𝗆𝖾𝗍𝗁𝗈𝖽. 𝖯𝗎𝗍 𝗒𝗈𝗎𝗋 𝗍𝖾𝗑𝗍 𝗅𝗂𝗄𝖾 𝗍𝗁𝗂𝗌.\n[ 𝖸𝗈𝗎𝗋 𝖳𝖾𝗑𝗍 𝖧𝖾𝗋𝖾 ] = [ 𝖠𝗎𝗍𝗁𝗈𝗋 ]\n\n𝗘𝘅𝗮𝗺𝗽𝗹𝗲:\n 𝖫𝗈𝗏𝖾 𝗂𝗌 𝗅𝗂𝗄𝖾 𝖾𝗍𝖾𝗋𝗇𝖺𝗅 𝖿𝗂𝗋𝖾 = 𝖠𝗄𝗁𝗂𝗋𝗈', threadID, messageID);
     return;
   }
 
   const [quoteText, authorName] = input.map((item) => item.trim());
 
   const words = quoteText.split(' ');
-  if (words.length > 25) {
-    api.sendMessage('The quote text must be 25 words or less only.', threadID, messageID);
+  if (words.length > 30) {
+    api.sendMessage('ℹ️ | 𝖬𝖺𝗌𝗍𝖾𝗋, 𝗒𝗈𝗎𝗋 𝗍𝖾𝗑𝗍 𝗐𝗈𝗋𝖽 𝗊𝗎𝗈𝗍𝖾 𝗂𝗌 𝗍𝗈𝗈 𝗆𝗎𝖼𝗁. 𝖳𝗁𝖾 𝗍𝖾𝗑𝗍 𝗊𝗎𝗈𝗍𝖾 𝗆𝗎𝗌𝗍 𝗁𝖺𝗏𝖾 30 𝗐𝗈𝗋𝖽𝗌 𝗈𝗋 𝗅𝖾𝗌𝗌.', threadID, messageID);
     return;
   }
 
@@ -121,7 +121,7 @@ module.exports.run = async function ({ api, event, args }) {
     api.sendMessage(
       {
         attachment: fs.createReadStream('aesthetic.jpg'),
-        body: 'Here is your customized AestheticQuote:',
+        body: '✅ | 𝖬𝖺𝗌𝗍𝖾𝗋, 𝗁𝖾𝗋𝖾 𝗂𝗌 𝗒𝗈𝗎𝗋 𝖼𝗎𝗌𝗍𝗈𝗆𝗂𝗓𝖾𝖽 𝖠𝖾𝗌𝗍𝗁𝖾𝗍𝗂𝖼𝖰𝗎𝗈𝗍𝖾:',
       },
       threadID,
       messageID

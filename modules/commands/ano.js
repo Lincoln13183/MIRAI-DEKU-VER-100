@@ -28,7 +28,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL, Users }) {
     ];
     var sticker1 = data[Math.floor(Math.random() * data.length)];
 	if (event.body.indexOf("deku")==0 || (event.body.indexOf("Deku")==0 || (event.body.indexOf("hi deku")==0 || (event.body.indexOf("hello deku")==0)))) {
-			api.sendMessage("Hi i'm always here", event.threadID, (e, info) => {
+			api.sendMessage("🙋‍♂️ | 𝖧𝖾𝗅𝗅𝗈 𝗍𝗁𝖾𝗋𝖾 𝗆𝖺𝗌𝗍𝖾𝗋, 𝖨𝗆 𝖣𝖾𝗄𝗎𝖡𝗈𝗍. 𝖧𝗈𝗐 𝗆𝖺𝗒 𝖨 𝖺𝗌𝗌𝗂𝗌𝗍 𝗒𝗈𝗎 𝗍𝗈𝖽𝖺𝗒?", event.threadID, (e, info) => {
       setTimeout(() => {
         api.sendMessage({sticker: sticker1}, event.threadID);
       }, 100)

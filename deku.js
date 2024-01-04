@@ -41,7 +41,7 @@ const login = require("fb-anya");
 const axios = require("axios");
 const listPackage = JSON.parse(readFileSync('./package.json')).dependencies;
 const listbuiltinModules = require("module").builtinModules;
-console.log(chalk.bold.hex("#03f0fc").bold("《 DEKU 》 » ") + chalk.bold.hex("#fcba03").bold("Initializing variables..."));
+console.log(chalk.bold.hex("#03f0fc").bold("《SYSTEM》 » ") + chalk.bold.hex("#fcba03").bold("Initializing variables..."));
 
 global.client = new Object({
     commands: new Map(),

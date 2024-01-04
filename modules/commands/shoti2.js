@@ -1,15 +1,15 @@
 module.exports.config = {
   name: "shoti2",
-  version: "1.0.0",
-  credits: "James",
+  version: "1.0.2",
+  credits: "Réynél",
   description: "Generate random tiktok girl videos",
   hasPermssion: 0,
   commandCategory: "entertainment",
-  usage: "[dessert]",
+  usage: "[shoti2]",
   cooldowns: 5,
   dependencies: [],
 };
-
+ 
 module.exports.run = async function ({ api, event }) {
   try {
     const axios = require("axios");
@@ -27,7 +27,7 @@ module.exports.run = async function ({ api, event }) {
     file.on("finish", () => {
       return api.sendMessage(
         {
-          body: `@${response.data.data.user.username}`,
+          body: `✅ | 𝖲𝖾𝗇𝗌𝖾𝗂, 𝗁𝖾𝗋𝖾 𝗂𝗌 𝗒𝗈𝗎𝗋 𝗍𝗂𝗄𝗍𝗈𝗄 𝗌𝗁𝗈𝗍𝗂 𝗏𝗂𝖽𝖾𝗈:\n━━━━━━━━━━━━━━━━━━━\n@${response.data.data.user.username}`,
           attachment: fs.createReadStream(__dirname + "/cache/shoti.mp4"),
         },
         event.threadID,

@@ -67,10 +67,10 @@ module.exports.run = async function ({ event, api, args }) {
     const { threadID, messageID, senderID } = event;
     var mention = Object.keys(event.mentions)[0]
     let tag = event.mentions[mention].replace("@", "");
-    if (!mention) return api.sendMessage("Please mention 1 Person", threadID, messageID);
+    if (!mention) return api.sendMessage("ℹ️ | 𝖬𝖺𝗌𝗍𝖾𝗋 𝗉𝗅𝖾𝖺𝗌𝖾 𝗆𝖾𝗇𝗍𝗂𝗈𝗇 1 𝗉𝖾𝗋𝗌𝗈𝗇", threadID, messageID);
     else {
         var one = senderID, two = mention;
-        return makeImage({ one, two }).then(path => api.sendMessage({ body: "Congratulations on entering the state payroll " + tag + '\n Wish you happy',
+        return makeImage({ one, two }).then(path => api.sendMessage({ body: "𝗔𝗥𝗥𝗘𝗦𝗧𝗘𝗗 " + tag + '\n\n 𝖸𝗈𝗎 𝖺𝗋𝖾 𝗇𝗈𝗐 𝖻𝖾𝖾𝗇 𝖺𝗋𝗋𝖾𝗌𝗍𝖾𝖽, 𝗐𝗂𝗌𝗁 𝗒𝗈𝗎 𝖺 𝗁𝖺𝗉𝗉𝗒 𝗅𝗂𝖿𝖾 𝖻𝖾𝗁𝗂𝗇𝖽 𝖻𝖺𝗋𝗌 𝗆𝖺𝗌𝗍𝖾𝗋',
             mentions: [{
           tag: tag,
           id: mention

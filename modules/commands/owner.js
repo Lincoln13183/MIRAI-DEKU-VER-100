@@ -39,14 +39,14 @@ module.exports.run = async ({ api, event }) => {
     fs.writeFileSync(videoPath, Buffer.from(videoResponse.data, 'binary'));
 
     const response = `
-✧ 𝗢𝗪𝗡𝗘𝗥 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡 ✧\n
-Name: ${ownerInfo.name}
-Gender: ${ownerInfo.gender}
-Age: ${ownerInfo.age}
-Height: ${ownerInfo.height}
-Facebook: ${ownerInfo.facebookLink}
-Status: ${ownerInfo.status}
-`;
+━━━━━━━━━━━━━━━━━━━\n✧ 𝗢𝗪𝗡𝗘𝗥 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡 ✧\n
+𝗡𝗔𝗠𝗘: ${ownerInfo.name}
+𝗚𝗘𝗡𝗗𝗘𝗥: ${ownerInfo.gender}
+𝗔𝗚𝗘: ${ownerInfo.age}
+𝗛𝗘𝗜𝗚𝗛𝗧: ${ownerInfo.height}
+𝗙𝗔𝗖𝗘𝗕𝗢𝗢𝗞: ${ownerInfo.facebookLink}
+𝗥𝗘𝗟𝗔𝗧𝗜𝗢𝗡𝗦𝗛𝗜𝗣 𝗦𝗧𝗔𝗧𝗨𝗦: ${ownerInfo.status}
+\n━━━━━━━━━━━━━━━━━━━`;
 
 
     await api.sendMessage({
